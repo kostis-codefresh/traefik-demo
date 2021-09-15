@@ -1,0 +1,15 @@
+kind: Ingress
+apiVersion: extensions/v1beta1
+metadata:
+  name: "simple-traefik-ingress"
+  annotations:
+    kubernetes.io/ingress.class: traefik
+
+spec:
+  rules:
+    - http:
+        paths:
+          - path: /demo
+            backend:
+              serviceName: simple-service
+              servicePort: 80
