@@ -9,7 +9,7 @@ spec:
   rules:
     - http:
         paths:
-          - path: /dashboard
+          - path: /start
             backend:
               serviceName: forecastle
               servicePort: 80

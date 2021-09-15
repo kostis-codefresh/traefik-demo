@@ -1,0 +1,13 @@
+apiVersion: traefik.containo.us/v1alpha1
+kind: IngressRoute
+metadata:
+  name: simpleingressroute
+spec:
+  entryPoints:
+    - web
+  routes:
+  - match: PathPrefix(`/login`)
+    kind: Rule
+    services:
+    - name: simple-service
+      port: 80
